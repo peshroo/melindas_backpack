@@ -47,7 +47,7 @@ class BackpackTest < MiniTest::Test
   # is something missing here?
   def test_that_has_shoes_mondays_thursdays
     ['monday', 'thursday'].each do |day|
-      backpack = build.(:backpack, day_of_week: day)
+      backpack = build(:backpack, day_of_week: day)
       assert(backpack.items.include?('gym shoes'))
     end
   end
