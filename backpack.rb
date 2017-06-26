@@ -16,18 +16,19 @@ class Backpack
 
     # Ensure appropriate clothing is added to backpack
     if weather == 'rainy'
-      @items << 'pants'
-      @items << 'shirt'
+      atleast_pants_shirt
       @items << 'umbrella'
     elsif weather == 'cold'
-      @items << 'pants'
-      @items << 'shirt'
+      atleast_pants_shirt
       @items << 'jacket'
     else
-      @items << 'pants'
-      @items << 'shirt'
+      atleast_pants_shirt
     end
 
+  def atleast_pants_shirt
+    @items << 'pants'
+    @items << 'shirt'
+  end
     # Ensure gym shoes are added to backpack if it's a gym day
     # Gotta get to the gym on Mondays and Thursdays. Wait a sec...
     if day_of_week == 'monday' || day_of_week == 'thursday'
